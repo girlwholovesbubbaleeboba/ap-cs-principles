@@ -1,0 +1,13 @@
+<form class="form-inline" method="POST" action="{{ url_for('second_question') }}">
+    <div class="form-group">
+      <div class="input-group">
+          <span class="input-group-addon">What place do you feel most at home in?</span>
+              <select name="selected" class="selectpicker form-control">
+                {% for answer in answers %}
+                <option value="{{answer}}">{{answer}}</option>
+                {% endfor %}
+              </select>
+      </div>
+      <button type="submit" class="btn btn-default">Go</button>
+    </div>
+</form>
